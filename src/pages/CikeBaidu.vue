@@ -2,15 +2,15 @@
     <div class="cike-baidu">
       <!--头部banner-->
       <div class="banner">
-        <img src="../assets/images/baiduImg/banner.jpg" width="100%"/>
+        <img src="../assets/images/baiduImg/banner.webp" width="100%"/>
       </div>
       <!--头部banner-->
       <div class="welcome">
-        <img class="welcome-img" src="../assets/images/baiduImg/welcome.png"/>
-        <a href="#price-title"><img class="welcome-btn" src="../assets/images/baiduImg/btn-price.png"/></a>
-        <a href="#online_class"><img class="welcome-btn" src="../assets/images/baiduImg/btn-onlineClass.png"/></a>
-        <a href="#activity"><img class="welcome-btn" src="../assets/images/baiduImg/btn-activity.png"/></a>
-        <a href="#yuyue"><img class="welcome-btn" src="../assets/images/baiduImg/btn-yuyue.png"/></a>
+        <img class="welcome-img" src="../assets/images/baiduImg/welcome.webp"/>
+        <a href="#price-title"><img class="welcome-btn" src="../assets/images/baiduImg/btn-price.webp"/></a>
+        <a href="#online_class"><img class="welcome-btn" src="../assets/images/baiduImg/btn-onlineClass.webp"/></a>
+        <a href="#activity"><img class="welcome-btn" src="../assets/images/baiduImg/btn-activity.webp"/></a>
+        <a href="#yuyue"><img class="welcome-btn" src="../assets/images/baiduImg/btn-yuyue.webp"/></a>
       </div>
       <h2 class="price-title" id="price-title">课程报价生成器</h2>
       <!--学习意向表单-->
@@ -94,7 +94,7 @@
       <div class="next-btn" @click="next">下一步</div>
       <!--学习意向表单结束-->
       <div class="online_class" id="online_class">
-        <img src="../assets/images/baiduImg/online_class.jpg" width="100%" @click="isClassList=true"/>
+        <img src="../assets/images/baiduImg/online_class.webp" width="100%" @click="isClassList=true"/>
       </div>
       <div class="yuyue-box" id="yuyue">
         <h1>预约线下试听课</h1>
@@ -102,7 +102,7 @@
         <div class="yuyue-input">
           <group>
             <x-input v-model="phoneLine" novalidate :icon-type="iconType" :show-clear="false" :max="11" placeholder="请输入您的手机号，方便老师联系你">
-              <img slot="label" class="input-icon" src="../assets/images/baiduImg/mobilephone.png"/>
+              <img slot="label" class="input-icon" src="../assets/images/baiduImg/mobilephone.webp"/>
             </x-input>
           </group>
         </div>
@@ -110,7 +110,7 @@
         <p class="already-yuyue"><span>16357</span>人已预约</p>
       </div>
       <div id="activity">
-        <img src="../assets/images/baiduImg/activity.jpg" width="100%"/>
+        <img src="../assets/images/baiduImg/activity.webp" width="100%"/>
       </div>
       <div class="one-by-one" id="class">
         <div class="container">
@@ -119,18 +119,21 @@
           <div class="one-by-one-btn">立即预约</div>
         </div>
       </div>
-      <div>点击</div>
-      <img class="buttom_logo" src="../assets/images/baiduImg/buttom_logo.png"/>
-      <div style="height: 50px"></div>
+      <img class="buttom_logo" src="../assets/images/baiduImg/buttom_logo.webp"/>
+      <div style="padding-bottom: 50px;background-color: #f3f4f8;font-size: 8px;color: #a6a6a6;text-align: center">
+        <p>咨询热线：400-8839-169</p>
+        <p>Copyright © 2016 蜀 All Rights Reserved.</p>
+        <p>ICP认证：蜀ICP备14026654号-2</p>
+      </div>
       <div class="foot-bar">
         <div class="left">
           <div class="l" @click="isShowDialog=true">
-            <img src="../assets/images/baiduImg/wechat.png" width="22" height="17"/>
+            <img src="../assets/images/baiduImg/wechat.webp" width="22" height="17"/>
             <p>微信咨询</p>
           </div>
           <div class="r">
             <a href="tel:4008839169" style="display: block">
-              <img src="../assets/images/baiduImg/call.png" width="22" height="17"/>
+              <img src="../assets/images/baiduImg/call.webp" width="22" height="17"/>
               <p style="color: #222">电话咨询</p>
             </a>
           </div>
@@ -141,20 +144,20 @@
       <!--预约到校-->
       <div v-transfer-dom>
         <popup v-model="isShowYuyue" position="bottom" max-height="100%">
-          <img class="popup-logo" src="../assets/images/baiduImg/buttom_logo.png"/>
+          <img class="popup-logo" src="../assets/images/baiduImg/buttom_logo.webp"/>
           <div class="popup-content">
             <h2 class="popup-content-title">预约到校</h2>
             <div class="come-school">
               <group gutter="0">
                 <x-input v-model="userName" type="text" placeholder="姓名">
-                  <img slot="label" class="input-icon" src="../assets/images/baiduImg/people.png"/>
+                  <img slot="label" class="input-icon" src="../assets/images/baiduImg/people.webp"/>
                 </x-input>
               </group>
             </div>
             <div class="come-school">
               <group gutter="0">
                 <x-input v-model="phoneComeSchool" novalidate :icon-type="iconTypeComeSchool" :show-clear="false" :max="11" placeholder="电话">
-                  <img slot="label" class="input-icon" src="../assets/images/baiduImg/mobilephone.png"/>
+                  <img slot="label" class="input-icon" src="../assets/images/baiduImg/mobilephone.webp"/>
                 </x-input>
               </group>
             </div>
@@ -166,12 +169,12 @@
       <!--验证您的手机号得到报价方案-->
       <div v-transfer-dom>
         <popup v-model="isShowOffer" position="bottom" max-height="100%">
-          <img class="popup-logo" src="../assets/images/baiduImg/buttom_logo.png"/>
+          <img class="popup-logo" src="../assets/images/baiduImg/buttom_logo.webp"/>
           <div class="popup-content">
             <h2 class="popup-content-title">验证您的手机号得到报价方案</h2>
             <group>
               <x-input v-model="phonePlan" is-type="china-mobile" placeholder="电话">
-                <img slot="label" class="input-icon" src="../assets/images/baiduImg/mobilephone.png"/>
+                <img slot="label" class="input-icon" src="../assets/images/baiduImg/mobilephone.webp"/>
               </x-input>
               <x-input v-model="phoneCode" class="weui-vcode" :is-type="checkCode" :show-clear="false" placeholder="默认1111">
                 <x-button slot="right" type="primary" :disabled="buttonDisabled" mini @click.native="getCode" :text="buttonText"></x-button>
@@ -186,7 +189,7 @@
       <!--预算结果-->
       <div v-transfer-dom>
         <popup v-model="isShowOfferTwo" position="bottom" max-height="100%">
-          <img class="popup-logo" src="../assets/images/baiduImg/buttom_logo.png"/>
+          <img class="popup-logo" src="../assets/images/baiduImg/buttom_logo.webp"/>
           <div class="popup-content">
             <h2 class="popup-content-title">预算结果</h2>
             <div style="color: #30235B">
@@ -208,7 +211,7 @@
             <video width="100%" ref="video" controls src="http://video.cike.hk/f083bc8f7c8f4d948e421a0d195d9983/462d934370e24896a9ea1066fcdd2a47-a5b7d8911cc7d347a9c9dd7e9b1d521b.mp4"></video>
             <div class="class-item" :style="index%2===0?'flex-direction: row-reverse':''" v-for="(item, index) in videoSrc" @click="playVideo(item.src)">
               <div class="item-left">
-                <img src="../assets/images/baiduImg/daoxueke.jpg" width="80%"/>
+                <img src="../assets/images/baiduImg/daoxueke.webp" width="80%"/>
               </div>
               <div class="item-right">{{item.name}}</div>
             </div>
@@ -220,7 +223,7 @@
         <x-dialog v-model="isShowDialog">
           <p class="dialog-cancel"><span @click="isShowDialog=false"> × </span></p>
           <p>长按识别二维码</p>
-          <img class="dialog-img" src="../assets/images/baiduImg/CIKE-QRcode.jpg"/>
+          <img class="dialog-img" src="../assets/images/baiduImg/CIKE-QRcode.webp"/>
           <p>或者复制下方微信号</p>
           <p style="margin-bottom: 20px">15328083991</p>
         </x-dialog>
@@ -343,21 +346,18 @@
             } else { this.swiperItemIndex++ }
             break
           case 1:
-            console.log(this.targetItem)
             if (this.targetItem === null) {
               this.topTipsText = '您还没有选择学习目的'
               this.isTopTips = true
             } else { this.swiperItemIndex++ }
             break
           case 2:
-            console.log(this.levelItem)
             if (this.levelItem === null) {
               this.topTipsText = '您还没有选择英语水平'
               this.isTopTips = true
             } else { this.swiperItemIndex++ }
             break
           case 3:
-            console.log(this.dayItem, this.hoursItem)
             if (this.dayItem === null || this.hoursItem === null) {
               this.topTipsText = '您还没有选择每天学习时间'
               this.isTopTips = true
@@ -590,7 +590,7 @@
   }
   .one-by-one{
     width: 100%;
-    background-image: url("../assets/images/baiduImg/20171206130429.jpg");
+    background-image: url("../assets/images/baiduImg/20171206130429.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
