@@ -23,11 +23,11 @@
       <!--</div>-->
       <div class="banner" @click="play2">
         <!--点击播放-->
-        <img src="../assets/images/baiduImg/banner.jpg" width="100%"/>
+        <img src="../assets/images/baiduImg/banner.jpg" width="100%" onclick="return false"/>
       </div>
       <!--头部banner-->
       <div class="welcome">
-        <img class="welcome-img" src="../assets/images/baiduImg/welcome.png"/>
+        <img class="welcome-img" src="../assets/images/baiduImg/welcome.png" onclick="return false"/>
         <a href="#price-title"><img class="welcome-btn" src="../assets/images/baiduImg/btn1-compressed.gif"/></a>
         <a href="#online_class"><img class="welcome-btn" src="../assets/images/baiduImg/btn2-compressed.gif"/></a>
         <a href="#activity"><img class="welcome-btn" src="../assets/images/baiduImg/btn3-compressed.gif"/></a>
@@ -115,7 +115,7 @@
       <div class="next-btn" @click="next">下一步</div>
       <!--学习意向表单结束-->
       <div class="online_class" id="online_class">
-        <img src="../assets/images/baiduImg/online_class.jpg" width="100%" @click="isClassList=true"/>
+        <img src="../assets/images/baiduImg/online_class.jpg" width="100%" @click="isClassList=true" onclick="return false"/>
       </div>
       <div class="yuyue-box" id="yuyue">
         <h1>预约线下试听课</h1>
@@ -123,15 +123,31 @@
         <div class="yuyue-input">
           <group>
             <x-input v-model="phoneLine" novalidate :icon-type="iconType" :show-clear="false" :max="11" placeholder="请输入您的手机号，方便老师联系你">
-              <img slot="label" class="input-icon" src="../assets/images/baiduImg/mobilephone.png"/>
+              <img slot="label" class="input-icon" src="../assets/images/baiduImg/mobilephone.png" onclick="return false"/>
             </x-input>
           </group>
         </div>
         <div class="yuyue-btn" @click="submitLine">免费预约</div>
         <p class="already-yuyue"><span>16357</span>人已预约</p>
       </div>
-      <div id="activity">
-        <img src="../assets/images/baiduImg/activity.jpg" width="100%"/>
+      <div id="activity" class="activity">
+        <img src="../assets/images/baiduImg/activity.jpg" width="100%" onclick="return false"/>
+        <div class="activity-video">
+          <img src="../assets/images/baiduImg/video_pic.png" width="100%" v-show="avtivityVideoPaused" @click.prevent="playActivityVideo">
+          <video ref="activityVideo"
+                 x5-video-player-type="h5"
+                 x5-video-player-fullscreen="false"
+                 webkit-playsinline="true"
+                 playsinline="true"
+                 x-webkit-airplay="true"
+                 :src="activityVideoSrc"
+                 width="100%"
+                 v-show="!avtivityVideoPaused"
+                 controls
+                 @playing="onplayingActivityVideo"
+                 @pause="onpauseActivityVideo"
+          ></video>
+        </div>
       </div>
       <div class="one-by-one" id="class">
         <div class="container">
@@ -140,7 +156,7 @@
           <div class="one-by-one-btn">立即预约</div>
         </div>
       </div>
-      <img class="buttom_logo" src="../assets/images/baiduImg/buttom_logo.png"/>
+      <img class="buttom_logo" src="../assets/images/baiduImg/buttom_logo.png" onclick="return false"/>
       <div style="padding-bottom: 50px;background-color: #f3f4f8;font-size: 8px;color: #a6a6a6;text-align: center">
         <p>咨询热线：400-8839-169</p>
         <p>Copyright © 2016 蜀 All Rights Reserved.</p>
@@ -149,12 +165,12 @@
       <div class="foot-bar">
         <div class="left">
           <div class="l" @click="isShowDialog=true">
-            <img src="../assets/images/baiduImg/wechat.png" width="22" height="17"/>
+            <img src="../assets/images/baiduImg/wechat.png" width="22" height="17" onclick="return false"/>
             <p>微信咨询</p>
           </div>
           <div class="r">
             <a href="tel:4008839169" style="display: block">
-              <img src="../assets/images/baiduImg/call.png" width="22" height="17"/>
+              <img src="../assets/images/baiduImg/call.png" width="22" height="17" onclick="return false"/>
               <p style="color: #222">电话咨询</p>
             </a>
           </div>
@@ -165,20 +181,20 @@
       <!--预约到校-->
       <div v-transfer-dom>
         <popup v-model="isShowYuyue" position="bottom" max-height="100%">
-          <img class="popup-logo" src="../assets/images/baiduImg/buttom_logo.png"/>
+          <img class="popup-logo" src="../assets/images/baiduImg/buttom_logo.png" onclick="return false"/>
           <div class="popup-content">
             <h2 class="popup-content-title">预约到校</h2>
             <div class="come-school">
               <group gutter="0">
                 <x-input v-model="userName" type="text" placeholder="姓名">
-                  <img slot="label" class="input-icon" src="../assets/images/baiduImg/people.png"/>
+                  <img slot="label" class="input-icon" src="../assets/images/baiduImg/people.png" onclick="return false"/>
                 </x-input>
               </group>
             </div>
             <div class="come-school">
               <group gutter="0">
                 <x-input v-model="phoneComeSchool" novalidate :icon-type="iconTypeComeSchool" :show-clear="false" :max="11" placeholder="电话">
-                  <img slot="label" class="input-icon" src="../assets/images/baiduImg/mobilephone.png"/>
+                  <img slot="label" class="input-icon" src="../assets/images/baiduImg/mobilephone.png" onclick="return false"/>
                 </x-input>
               </group>
             </div>
@@ -190,19 +206,19 @@
       <!--验证您的手机号得到报价方案-->
       <div v-transfer-dom>
         <popup v-model="isShowOffer" position="bottom" max-height="100%">
-          <img class="popup-logo" src="../assets/images/baiduImg/buttom_logo.png"/>
+          <img class="popup-logo" src="../assets/images/baiduImg/buttom_logo.png" onclick="return false"/>
           <div class="popup-content">
             <h2 class="popup-content-title">验证您的手机号得到报价方案</h2>
             <group>
               <x-input v-model="phonePlan" is-type="china-mobile" placeholder="电话">
-                <img slot="label" class="input-icon" src="../assets/images/baiduImg/mobilephone.png"/>
+                <img slot="label" class="input-icon" src="../assets/images/baiduImg/mobilephone.png" onclick="return false"/>
               </x-input>
-              <x-input v-model="phoneCode" class="weui-vcode" :is-type="checkCode" :show-clear="false" placeholder="默认1111">
-                <x-button slot="right" type="primary" :disabled="buttonDisabled" mini @click.native="getCode" :text="buttonText"></x-button>
-              </x-input>
+              <!--<x-input v-model="phoneCode" class="weui-vcode" :is-type="checkCode" :show-clear="false" placeholder="默认1111">-->
+                <!--<x-button slot="right" type="primary" :disabled="buttonDisabled" mini @click.native="getCode" :text="buttonText"></x-button>-->
+              <!--</x-input>-->
             </group>
             <div class="come-school-tips">我们将承诺，尊重并保护您的隐私</div>
-            <div class="price-confirm" @click="checkPlan(phoneCode, phonePlan)">查看方案</div>
+            <div class="price-confirm" @click="checkPlanNoSMS(phonePlan)">查看方案</div>
             <div class="price-cancel" @click="isShowOffer=false">取消</div>
           </div>
         </popup>
@@ -210,7 +226,7 @@
       <!--预算结果-->
       <div v-transfer-dom>
         <popup v-model="isShowOfferTwo" position="bottom" max-height="100%">
-          <img class="popup-logo" src="../assets/images/baiduImg/buttom_logo.png"/>
+          <img class="popup-logo" src="../assets/images/baiduImg/buttom_logo.png" onclick="return false"/>
           <div class="popup-content">
             <h2 class="popup-content-title">预算结果</h2>
             <div style="color: #30235B">
@@ -227,12 +243,16 @@
       <!--试听课列表-->
       <div v-transfer-dom>
         <popup v-model="isClassList" position="top" height="100%">
-          <p style="font-size: 30px;line-height: 1;font-weight: bold;text-align: right;padding-right: 20px"><span @click="isClassList=false">×</span></p>
-          <div style="padding: 10px 30px 30px;">
-            <video width="100%" ref="video" controls src="http://video.cike.hk/f083bc8f7c8f4d948e421a0d195d9983/462d934370e24896a9ea1066fcdd2a47-a5b7d8911cc7d347a9c9dd7e9b1d521b.mp4"></video>
+          <p class="audition-close"><span @click="closeAuditionVideo">×</span></p>
+          <div class="audition-wrap">
+            <video width="100%"
+                   ref="video"
+                   controls
+                   src="http://video.cike.hk/f083bc8f7c8f4d948e421a0d195d9983/462d934370e24896a9ea1066fcdd2a47-a5b7d8911cc7d347a9c9dd7e9b1d521b.mp4"
+            ></video>
             <div class="class-item" :style="index%2===0?'flex-direction: row-reverse':''" v-for="(item, index) in videoSrc" @click="playVideo(item.src)">
               <div class="item-left">
-                <img src="../assets/images/baiduImg/daoxueke.jpg" width="80%"/>
+                <img src="../assets/images/baiduImg/daoxueke.jpg" width="80%" onclick="return false"/>
               </div>
               <div class="item-right">{{item.name}}</div>
             </div>
@@ -265,7 +285,7 @@
 </template>
 <script>
   import { Swiper, SwiperItem, Step, StepItem, Checker, CheckerItem, XInput, Group, TransferDomDirective as TransferDom, Popup, XDialog, XButton, Alert } from 'vux'
-  import { willClassList, targetList, levelList, dayList, hoursList, videoSrc } from '../assets/js/cikeBaiduData'
+  import { willClassList, targetList, levelList, dayList, hoursList, videoSrc, activityVideoSrc } from '../assets/js/cikeBaiduData'
   import isMobilePhone from 'validator/lib/isMobilePhone'
   export default {
     name: 'CikeBaidu',
@@ -298,6 +318,8 @@
         dayList: dayList,
         dayItem: null,
         hoursList: hoursList,
+        activityVideoSrc: activityVideoSrc,
+        avtivityVideoPaused: true,
         hoursItem: null,
         isShowYuyue: false,
         isShowOffer: false,
@@ -338,7 +360,7 @@
     },
     filters: {},
 //    mounted () {
-//      this.audioAutoPlay('video2')
+//      console.log(this.$route.query)
 //    },
     computed: {},
     methods: {
@@ -347,7 +369,7 @@
         this.$http.get('http://www.cike.hk/sale/userSave', {
           params: {
             phone: phone,
-            name: name
+            name: `${name}。info:${JSON.stringify(this.$route.query)}`
           }
         }).then((data) => {
           console.log(data)
@@ -358,6 +380,18 @@
       //  测试发送数据
       test (phone, name) {
         console.log('用户：' + phone + '.' + name)
+        console.log(`用户：${phone}.${name}。info:${JSON.stringify(this.$route.query)}`)
+      },
+      // 短信验证
+      sms () {
+        const url = 'http://www.cike.hk/api/cike/sms/'
+        const phone = 13778115008
+        this.$http.get(url + phone, {}).then((response) => {
+//          this.code = response.data.data
+          console.log(response.data.data)
+//          this.smsCode = response.body.data
+          console.log(response.body.data)
+        })
       },
       next () {
         switch (this.swiperItemIndex) {
@@ -393,6 +427,19 @@
           this.isTopTips = true
         } else if (!(phoneCode === '1111')) {
           this.topTipsText = '请输入正确的验证码'
+          this.isTopTips = true
+        } else {
+          let type = '寻求报价'
+          let name = type + '，学习意向：' + this.willClassItem + '，学习目的：' + this.targetItem + '，目前英语水平：' + this.levelItem + '，每周学习时长：' + this.dayItem + this.hoursItem
+          this.getUserSave(phone, name)
+          this.isShowOffer = false
+          this.isShowOfferTwo = true
+        }
+      },
+      // 不需要验证短信码
+      checkPlanNoSMS (phone) {
+        if (!isMobilePhone(phone, 'zh-CN')) {
+          this.topTipsText = '请输入正确的电话号码'
           this.isTopTips = true
         } else {
           let type = '寻求报价'
@@ -470,9 +517,27 @@
         video.src = src
         video.play()
       },
+      playActivityVideo () {
+        const video = this.$refs.activityVideo
+        if (video.paused) {
+          video.play()
+        } else {
+          video.pause()
+        }
+      },
+      onplayingActivityVideo () {
+        this.avtivityVideoPaused = false
+      },
+      onpauseActivityVideo () {
+        this.avtivityVideoPaused = true
+      },
       play2 () {
         const video = this.$refs.videoStudy
         video.play()
+      },
+      closeAuditionVideo () {
+        this.isClassList = false
+        this.$refs.video.pause()
       }
       //      微信端自动播放
 //      audioAutoPlay (id) {
@@ -535,7 +600,7 @@
   .next-btn{
     margin: 0 auto;
     width: 30%;
-    background-color: #f9244c;
+    background-color: #f25f6b;
     text-align: center;
     padding: 5px 10px;
     font-size: 18px;
@@ -600,7 +665,8 @@
   .yuyue-box{
     text-align: center;
     background-color: #f5f5f5;
-    margin-top: -8px
+    margin-top: -8px;
+    color: #666;
   }
   .yuyue-box .yuyue-btn{
     width: 90%;
@@ -627,6 +693,13 @@
     background-color: #fff;
     border-radius: 5px;
   }
+  .activity {
+    position: relative;
+  }
+  .activity .activity-video{
+    position: absolute;
+    bottom: 0;
+  }
   .input-icon{
     padding-right:10px;
     display:block;
@@ -651,6 +724,7 @@
     margin: 10px auto;
     background-color: #fb5858;
     border-radius: 50px;
+    font-size: 18px;
   }
   .buttom_logo{
     width: 90%;
@@ -681,7 +755,7 @@
     flex: 1;
   }
   .foot-bar .right{
-    background-color: #fb5858;
+    background-color: #f25f6b;
     flex: 1;
     font-size: 18px;
     color: #fff;
@@ -761,6 +835,16 @@
   .dialog-img{
     border: 1px solid #ccc;
     margin-top: 10px
+  }
+  .audition-close{
+    font-size: 30px;
+    line-height: 1;
+    font-weight: bold;
+    text-align: right;
+    padding-right: 20px
+  }
+  .audition-wrap{
+    padding: 10px 30px 30px;
   }
   .class-item{
     display: flex;
