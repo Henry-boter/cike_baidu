@@ -28,10 +28,10 @@
       <!--头部banner-->
       <div class="welcome">
         <img class="welcome-img" src="../assets/images/baiduImg/welcome.png" onclick="return false"/>
-        <a href="#price-title"><img class="welcome-btn" src="../assets/images/baiduImg/btn1-compressed.gif"/></a>
-        <a href="#online_class"><img class="welcome-btn" src="../assets/images/baiduImg/btn2-compressed.gif"/></a>
-        <a href="#activity"><img class="welcome-btn" src="../assets/images/baiduImg/btn3-compressed.gif"/></a>
-        <a href="#yuyue"><img class="welcome-btn" src="../assets/images/baiduImg/btn4-compressed.gif"/></a>
+        <a href="#price-title"><img class="welcome-btn" src="../assets/images/baiduImg/top-1.png"/></a>
+        <a href="#online_class"><img class="welcome-btn" src="../assets/images/baiduImg/top-2.png"/></a>
+        <a href="#yuyue"><img class="welcome-btn" src="../assets/images/baiduImg/top-3.png"/></a>
+        <a href="#activity"><img class="welcome-btn" src="../assets/images/baiduImg/top-4.png"/></a>
       </div>
       <h2 class="price-title" id="price-title">课程报价生成器</h2>
       <!--学习意向表单-->
@@ -114,8 +114,9 @@
       </swiper>
       <div class="next-btn" @click="next">下一步</div>
       <!--学习意向表单结束-->
-      <div class="online_class" id="online_class">
-        <img src="../assets/images/baiduImg/online_class.jpg" width="100%" @click="isClassList=true" onclick="return false"/>
+      <div class="online_class">
+        <img src="../assets/images/baiduImg/online_class.jpg" width="100%" onclick="return false"/>
+        <img src="../assets/images/baiduImg/video_bg.png"  id="online_class" width="90%" style="margin: 5%" @click="isClassList=true" onclick="return false"/>
       </div>
       <div class="yuyue-box" id="yuyue">
         <h1>预约线下试听课</h1>
@@ -153,7 +154,7 @@
         <div class="container">
           <p>免费预约更多课程</p>
           <p>一对一体验教学</p>
-          <div class="one-by-one-btn">立即预约</div>
+          <div class="one-by-one-btn" @click="isShowYuyue=true">立即预约</div>
         </div>
       </div>
       <img class="buttom_logo" src="../assets/images/baiduImg/buttom_logo.png" onclick="return false"/>
@@ -243,18 +244,19 @@
       <!--试听课列表-->
       <div v-transfer-dom>
         <popup v-model="isClassList" position="top" height="100%">
-          <p class="audition-close"><span @click="closeAuditionVideo">×</span></p>
+          <p class="audition-close"><span @click="closeAuditionVideo">
+            <img src="../assets/images/baiduImg/65465.gif" height="40px" width="40px"/></span></p>
+          <img src="../assets/images/baiduImg/st-banner.png" width="100%"/>
           <div class="audition-wrap">
             <video width="100%"
                    ref="video"
                    controls
+                   style="width: 90%;margin-left: 5%;margin-bottom: 15px"
                    src="http://video.cike.hk/f083bc8f7c8f4d948e421a0d195d9983/462d934370e24896a9ea1066fcdd2a47-a5b7d8911cc7d347a9c9dd7e9b1d521b.mp4"
             ></video>
-            <div class="class-item" :style="index%2===0?'flex-direction: row-reverse':''" v-for="(item, index) in videoSrc" @click="playVideo(item.src)">
-              <div class="item-left">
-                <img src="../assets/images/baiduImg/daoxueke.jpg" width="80%" onclick="return false"/>
-              </div>
-              <div class="item-right">{{item.name}}</div>
+            <div class="class-item" v-for="(item, index) in videoSrc" @click="playVideo(item.src)">
+              <img :src="item.pic" width="100%" onclick="return false"/>
+              <!--<div class="item-right">{{item.name}}</div>-->
             </div>
           </div>
         </popup>
@@ -562,12 +564,13 @@
   .welcome{
     width: 72%;
     margin: -40px auto 0;
-    background-color: #f1f3fe;
+    background-color: #fff;
     box-shadow: 0px 10px 15px 0px
     rgba(73, 73, 73, 0.2);
     position: relative;
     z-index: 1;
-    padding: 20px;
+    padding: 20px 20px 5px 20px;
+    border-radius: 10px;
   }
   .welcome .welcome-img{
     width: 80%;
@@ -576,7 +579,7 @@
   .welcome .welcome-btn{
     width: 100%;
     border-radius: 8px;
-    margin-bottom: 10px;
+    margin-bottom: 4px;
   }
   .price-title{
     margin-top: 32px;
@@ -607,6 +610,9 @@
     color: #fff;
     border-radius: 5px;
     margin-bottom: 40px;
+  }
+  .online_class{
+    background-color: #f5f5f5;
   }
   .swiper-item-radio {
     width: 29%;
@@ -712,7 +718,6 @@
     background-position: center;
   }
   .one-by-one .container{
-    background-color: rgba(0,0,0,0.3);
     text-align: center;
     padding-top: 65px;
     padding-bottom: 40px;
@@ -837,21 +842,17 @@
     margin-top: 10px
   }
   .audition-close{
-    font-size: 30px;
-    line-height: 1;
-    font-weight: bold;
+    position: absolute;
     text-align: right;
-    padding-right: 20px
+    padding-left: 10px;
+    padding-top: 10px;
+    color: #fff
   }
   .audition-wrap{
-    padding: 10px 30px 30px;
+    /*padding: 0px 30px 30px;*/
   }
   .class-item{
-    display: flex;
-    background-color: #fff;
-    align-items: center;
-    margin-bottom: 15px;
-    border-radius: 5px;
+    margin-bottom: -4px;
   }
   .class-item .item-left{
     flex:1;text-align: center;

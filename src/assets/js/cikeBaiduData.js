@@ -50,10 +50,18 @@ export const hoursList = [
 
 // 试听课程
 export const videoSrc = [
-  {name: '自然拼读纠音课', src: 'http://video.cike.hk/f49e2de6f85e401a8b5b43f8bffd2015/e2e354018c3045fca8885844c64c87aa-a5b7d8911cc7d347a9c9dd7e9b1d521b.mp4'},
-  {name: '口语入门班正式课', src: 'http://video.cike.hk/48bd9ceb9a3e421bad9651a56f5cf8dc/d786478b1f93404f9c3eeacc9684d0b9-a5b7d8911cc7d347a9c9dd7e9b1d521b.mp4'},
-  {name: '口语进阶班正式课', src: 'http://video.cike.hk/9f6f6b3b2f5043a8a7ba0303adb7d495/e6321ac69a834d3bb6b9183eab23908a-a5b7d8911cc7d347a9c9dd7e9b1d521b.mp4'},
-  {name: '英语突破班正式课', src: 'http://video.cike.hk/a1f5d9e48d8b4902877bc8bed8eed5a8/338dc5c9f7f146b1add40cf0ccec8241-a5b7d8911cc7d347a9c9dd7e9b1d521b.mp4'}
+  {name: '自然拼读纠音课',
+    src: 'http://video.cike.hk/f49e2de6f85e401a8b5b43f8bffd2015/e2e354018c3045fca8885844c64c87aa-a5b7d8911cc7d347a9c9dd7e9b1d521b.mp4',
+    pic: 'http://cikeenglish.oss-cn-shenzhen.aliyuncs.com/activity/201806192828'},
+  {name: '口语入门班正式课',
+    src: 'http://video.cike.hk/48bd9ceb9a3e421bad9651a56f5cf8dc/d786478b1f93404f9c3eeacc9684d0b9-a5b7d8911cc7d347a9c9dd7e9b1d521b.mp4',
+    pic: 'http://cikeenglish.oss-cn-shenzhen.aliyuncs.com/activity/201806193226'},
+  {name: '口语进阶班正式课',
+    src: 'http://video.cike.hk/9f6f6b3b2f5043a8a7ba0303adb7d495/e6321ac69a834d3bb6b9183eab23908a-a5b7d8911cc7d347a9c9dd7e9b1d521b.mp4',
+    pic: 'http://cikeenglish.oss-cn-shenzhen.aliyuncs.com/activity/201806193252'},
+  {name: '英语突破班正式课',
+    src: 'http://video.cike.hk/a1f5d9e48d8b4902877bc8bed8eed5a8/338dc5c9f7f146b1add40cf0ccec8241-a5b7d8911cc7d347a9c9dd7e9b1d521b.mp4',
+    pic: 'http://cikeenglish.oss-cn-shenzhen.aliyuncs.com/activity/201806193317'}
 ]
 
 // 直击活动现场视频地址
