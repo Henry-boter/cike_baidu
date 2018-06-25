@@ -283,10 +283,21 @@
       <div v-transfer-dom>
         <alert v-model="isAlert" :title="alertTitle" @on-show="onShow" @on-hide="onHide">{{alertText}}</alert>
       </div>
+      <!--立即注册获取试听资格-->
+      <div v-transfer-dom>
+        <confirm v-model="isShowRegBox"
+                 show-input
+                 ref="confirm5"
+                 :close-on-confirm="false"
+                 title="立即注册，免费试听"
+                 @on-cancel="onRegBoxCancel"
+                 @on-confirm="onRegBoxConfirm">
+        </confirm>
+      </div>
     </div>
 </template>
 <script>
-  import { Swiper, SwiperItem, Step, StepItem, Checker, CheckerItem, XInput, Group, TransferDomDirective as TransferDom, Popup, XDialog, XButton, Alert } from 'vux'
+  import { Swiper, SwiperItem, Step, StepItem, Checker, CheckerItem, XInput, Group, TransferDomDirective as TransferDom, Popup, XDialog, XButton, Alert, Confirm } from 'vux'
   import { willClassList, targetList, levelList, dayList, hoursList, videoSrc, activityVideoSrc } from '../assets/js/cikeBaiduData'
   import isMobilePhone from 'validator/lib/isMobilePhone'
   export default {
@@ -306,7 +317,8 @@
       Popup,
       XDialog,
       XButton,
-      Alert
+      Alert,
+      Confirm
     },
     data () {
       return {
@@ -348,8 +360,12 @@
             msg: 'Must be 1111'
           }
         },
-        phoneCode: null
+        phoneCode: null,
+        isShowRegBox: false
       }
+    },
+    mounted () {
+      // console.log(this.$route)
     },
     watch: {
       isTopTips (val) {
@@ -514,10 +530,17 @@
         }, 1000)
       },
       //      播放视频
+      // 做到这里的--------------------------------------------------------------------------------------------------------------------------------------------------------------------
       playVideo (src) {
-        const video = this.$refs.video
-        video.src = src
-        video.play()
+        let reg = this.checkReg()
+        if (!reg) {
+          this.isShowRegBox = true
+          this.inputPhone(src)
+        } else {
+          const video = this.$refs.video
+          video.src = src
+          video.play()
+        }
       },
       playActivityVideo () {
         const video = this.$refs.activityVideo
@@ -540,6 +563,28 @@
       closeAuditionVideo () {
         this.isClassList = false
         this.$refs.video.pause()
+      },
+      // 是否需要填电话号码
+      checkReg () {
+        console.log(this.$route.query.reg)
+        if (this.$route.query.reg === 'no') {
+          return false
+        } else {
+          return true
+        }
+      },
+      onRegBoxCancel () {
+        console.log('onRegBoxCancel')
+      },
+      onRegBoxConfirm (value) {
+        if (isMobilePhone(value, 'zh-CN')) {
+          alert('电话号码正确')
+          this.isShowRegBox = false
+        } else {
+          this.iconType = 'error'
+          this.topTipsText = '请输入正确的电话号码'
+          this.isTopTips = true
+        }
       }
       //      微信端自动播放
 //      audioAutoPlay (id) {
