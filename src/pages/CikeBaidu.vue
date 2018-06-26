@@ -300,6 +300,7 @@
   import { Swiper, SwiperItem, Step, StepItem, Checker, CheckerItem, XInput, Group, TransferDomDirective as TransferDom, Popup, XDialog, XButton, Alert, Confirm } from 'vux'
   import { willClassList, targetList, levelList, dayList, hoursList, videoSrc, activityVideoSrc } from '../assets/js/cikeBaiduData'
   import isMobilePhone from 'validator/lib/isMobilePhone'
+  import {saveData, getData} from '../assets/js/cache.js'
   export default {
     name: 'CikeBaidu',
     directives: {
@@ -530,12 +531,17 @@
         }, 1000)
       },
       //      播放视频
-      // 做到这里的--------------------------------------------------------------------------------------------------------------------------------------------------------------------
       playVideo (src) {
         let reg = this.checkReg()
+        let phone = getData('phone')
         if (!reg) {
-          this.isShowRegBox = true
-          this.inputPhone(src)
+          if (phone) {
+            const video = this.$refs.video
+            video.src = src
+            video.play()
+          } else {
+            this.isShowRegBox = true
+          }
         } else {
           const video = this.$refs.video
           video.src = src
@@ -566,7 +572,6 @@
       },
       // 是否需要填电话号码
       checkReg () {
-        console.log(this.$route.query.reg)
         if (this.$route.query.reg === 'no') {
           return false
         } else {
@@ -578,8 +583,12 @@
       },
       onRegBoxConfirm (value) {
         if (isMobilePhone(value, 'zh-CN')) {
-          alert('电话号码正确')
           this.isShowRegBox = false
+          this.isAlert = true
+          this.alertTitle = '注册成功！开始试听'
+          saveData('phone', value)
+          let name = '试听注册'
+          this.getUserSave(value, name)
         } else {
           this.iconType = 'error'
           this.topTipsText = '请输入正确的电话号码'

@@ -1,11 +1,20 @@
 import storage from 'good-storage'
 
-export function saveData (phone, query) {
-  let phoneNumber = storage.get(phone, '')
+export function saveData (param, query) {
+  let phoneNumber = storage.get(param, '')
   if (phoneNumber) {
-    console.log('已经存在电话号码了：' + phoneNumber)
+    console.log('已经存在此参数的值：' + phoneNumber)
   } else {
-    storage.set(phone, query)
-    console.log('电话号码储存成功！')
+    storage.set(param, query)
+    console.log('储存成功！')
+  }
+}
+
+export function getData (param) {
+  let phoneNumber = storage.get(param, '')
+  if (phoneNumber) {
+    return phoneNumber
+  } else {
+    return false
   }
 }
