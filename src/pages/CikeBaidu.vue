@@ -123,7 +123,7 @@
         <p>水平测试，量身定制专属你的试听课</p>
         <div class="yuyue-input">
           <group>
-            <x-input v-model="phoneLine" novalidate :icon-type="iconType" :show-clear="false" :max="11" placeholder="请输入您的手机号，方便老师联系你">
+            <x-input v-model="phoneLine" novalidate :icon-type="iconType" type="tel" :show-clear="false" :max="11" placeholder="请输入您的手机号，方便老师联系你">
               <img slot="label" class="input-icon" src="../assets/images/baiduImg/mobilephone.png" onclick="return false"/>
             </x-input>
           </group>
@@ -194,7 +194,7 @@
             </div>
             <div class="come-school">
               <group gutter="0">
-                <x-input v-model="phoneComeSchool" novalidate :icon-type="iconTypeComeSchool" :show-clear="false" :max="11" placeholder="电话">
+                <x-input v-model="phoneComeSchool" novalidate :icon-type="iconTypeComeSchool" type="tel" :show-clear="false" :max="11" placeholder="电话">
                   <img slot="label" class="input-icon" src="../assets/images/baiduImg/mobilephone.png" onclick="return false"/>
                 </x-input>
               </group>
@@ -211,7 +211,7 @@
           <div class="popup-content">
             <h2 class="popup-content-title">验证您的手机号得到报价方案</h2>
             <group>
-              <x-input v-model="phonePlan" is-type="china-mobile" placeholder="电话">
+              <x-input v-model="phonePlan" is-type="china-mobile" type="tel" placeholder="电话">
                 <img slot="label" class="input-icon" src="../assets/images/baiduImg/mobilephone.png" onclick="return false"/>
               </x-input>
               <!--<x-input v-model="phoneCode" class="weui-vcode" :is-type="checkCode" :show-clear="false" placeholder="默认1111">-->
