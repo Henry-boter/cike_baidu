@@ -145,7 +145,7 @@
       </div>
       <div class="foot-bar">
         <div class="left">
-          <div class="l" v-if="$route.query.channel.indexOf('weibo') !== -1">
+          <div class="l" v-if="isWeibo">
             <a href="http://p.qiao.baidu.com/im/index?siteid=10535005&ucid=8185192&cp=&cr=&cw=" style="color: #222;display: block;">
               <img src="../assets/images/baiduImg/wechat.png" width="22" height="17"/>
               <p>在线咨询</p>
@@ -237,6 +237,7 @@
             <video width="100%"
                    ref="video"
                    controls
+                   poster="http://cikeenglish.oss-cn-shenzhen.aliyuncs.com/activity/201807134114"
                    style="width: 90%;margin-left: 5%;margin-bottom: 15px"
                    src="http://video.cike.hk/f083bc8f7c8f4d948e421a0d195d9983/462d934370e24896a9ea1066fcdd2a47-a5b7d8911cc7d347a9c9dd7e9b1d521b.mp4"
             ></video>
@@ -272,12 +273,17 @@
       <!--立即注册获取试听资格-->
       <div v-transfer-dom>
         <confirm v-model="isShowRegBox"
-                 show-input
                  ref="confirm5"
                  :close-on-confirm="false"
-                 title="立即注册，免费试听"
                  @on-cancel="onRegBoxCancel"
                  @on-confirm="onRegBoxConfirm">
+          <img src="../assets/images/baiduImg/buttom_logo.png" width="100%" alt="" onclick="return false">
+          <h2 class="confirm-title">立即注册，免费试听</h2>
+          <group>
+            <x-input v-model="phoneReg" is-type="china-mobile" type="tel" placeholder="电话">
+              <img slot="label" class="input-icon" src="../assets/images/baiduImg/mobilephone.png" onclick="return false"/>
+            </x-input>
+          </group>
         </confirm>
       </div>
     </div>
@@ -348,6 +354,7 @@
           }
         },
         phoneCode: null,
+        phoneReg: '',
         isShowRegBox: false
       }
     },
@@ -367,7 +374,19 @@
 //    mounted () {
 //      console.log(this.$route.query)
 //    },
-    computed: {},
+    computed: {
+      isWeibo () {
+        if (this.$route.query.channel) {
+          if (this.$route.query.channel.indexOf('weibo') !== -1) {
+            return true
+          } else {
+            return false
+          }
+        } else {
+          return false
+        }
+      }
+    },
     methods: {
 //      发送消息
       getUserSave (phone, name) {
@@ -567,14 +586,14 @@
       onRegBoxCancel () {
         console.log('onRegBoxCancel')
       },
-      onRegBoxConfirm (value) {
-        if (isMobilePhone(value, 'zh-CN')) {
+      onRegBoxConfirm () {
+        if (isMobilePhone(this.phoneReg, 'zh-CN')) {
           this.isShowRegBox = false
           this.isAlert = true
           this.alertTitle = '注册成功！开始试听'
-          saveData('phone', value)
+          saveData('phone', this.phoneReg)
           let name = '试听注册'
-          this.getUserSave(value, name)
+          this.getUserSave(this.phoneReg, name)
         } else {
           this.iconType = 'error'
           this.topTipsText = '请输入正确的电话号码'
@@ -903,5 +922,10 @@
     font-weight: bold;
     text-indent: 1em
   }
-
+  .confirm-title{
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 15px
+  }
 </style>
