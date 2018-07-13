@@ -1,26 +1,6 @@
 <template>
     <div class="cike-baidu">
       <!--头部banner-->
-      <!--<div>-->
-        <!--<video ref="videoStudy"-->
-               <!--src="http://video.cike.hk/0dcd3d8e575149c881770982236c0d1e/37b456386806497fb8344f6b1b7b1b7e-S00000001-200000.mp4"-->
-               <!--x5-video-player-type="h5"-->
-               <!--x5-video-player-fullscreen="false"-->
-               <!--id="video2"-->
-               <!--width="100%"-->
-               <!--height="100%"-->
-               <!--preload="auto"-->
-               <!--poster=""-->
-               <!--loop-->
-               <!--muted-->
-               <!--autoplay="autoplay"-->
-               <!--webkit-playsinline="true"-->
-               <!--playsinline="true"-->
-               <!--x-webkit-airplay="true"-->
-               <!--class="videoPlayer"-->
-        <!--&gt;-->
-        <!--</video>-->
-      <!--</div>-->
       <div class="banner" @click="play2">
         <!--点击播放-->
         <img src="../assets/images/baiduImg/banner.jpg" width="100%" onclick="return false"/>
@@ -165,9 +145,9 @@
       </div>
       <div class="foot-bar">
         <div class="left">
-          <div class="l" v-if="$route.query.channel === 'weibo'">
-            <a href="http://p.qiao.baidu.com/im/index?siteid=10535005&ucid=8185192&cp=&cr=&cw=" style="color: #222;display: block;height: 45px">
-              <img src="../assets/images/baiduImg/wechat.png" width="22" height="17" onclick="return false"/>
+          <div class="l" v-if="$route.query.channel.indexOf('weibo') !== -1">
+            <a href="http://p.qiao.baidu.com/im/index?siteid=10535005&ucid=8185192&cp=&cr=&cw=" style="color: #222;display: block;">
+              <img src="../assets/images/baiduImg/wechat.png" width="22" height="17"/>
               <p>在线咨询</p>
             </a>
           </div>
@@ -617,10 +597,6 @@
 </script>
 
 <style scoped="scoped">
-  .videoPlayer{
-    /*margin: 10px 5% 10px;*/
-    width: 100%;
-  }
   .welcome{
     width: 72%;
     margin: -40px auto 0;
