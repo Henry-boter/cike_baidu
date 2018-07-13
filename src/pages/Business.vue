@@ -1,29 +1,9 @@
 <template>
     <div class="cike-baidu">
       <!--头部banner-->
-      <!--<div>-->
-        <!--<video ref="videoStudy"-->
-               <!--src="http://video.cike.hk/0dcd3d8e575149c881770982236c0d1e/37b456386806497fb8344f6b1b7b1b7e-S00000001-200000.mp4"-->
-               <!--x5-video-player-type="h5"-->
-               <!--x5-video-player-fullscreen="false"-->
-               <!--id="video2"-->
-               <!--width="100%"-->
-               <!--height="100%"-->
-               <!--preload="auto"-->
-               <!--poster=""-->
-               <!--loop-->
-               <!--muted-->
-               <!--autoplay="autoplay"-->
-               <!--webkit-playsinline="true"-->
-               <!--playsinline="true"-->
-               <!--x-webkit-airplay="true"-->
-               <!--class="videoPlayer"-->
-        <!--&gt;-->
-        <!--</video>-->
-      <!--</div>-->
       <div class="banner" @click="play2">
         <!--点击播放-->
-        <img src="../assets/images/baiduImg/banner.jpg" width="100%" onclick="return false"/>
+        <img src="../assets/images/business/business-banner.jpg" width="100%" onclick="return false"/>
       </div>
       <!--头部banner-->
       <div class="welcome">
@@ -115,15 +95,15 @@
       <div class="next-btn" @click="next">下一步</div>
       <!--学习意向表单结束-->
       <div class="online_class">
-        <img src="../assets/images/baiduImg/online_class.jpg" width="100%" onclick="return false"/>
-        <img src="../assets/images/baiduImg/video_bg.png"  id="online_class" width="90%" style="margin: 5%" @click="isClassList=true" onclick="return false"/>
+        <img src="../assets/images/business/business-1.jpg" width="100%" onclick="return false"/>
+        <img src="../assets/images/business/business-video.png"  id="online_class" width="90%" style="margin: 5%" @click="isClassList=true" onclick="return false"/>
       </div>
       <div class="yuyue-box" id="yuyue">
         <h1>预约线下试听课</h1>
         <p>水平测试，量身定制专属你的试听课</p>
         <div class="yuyue-input">
           <group>
-            <x-input v-model="phoneLine" novalidate :icon-type="iconType" type="tel" :show-clear="false" :max="11" placeholder="请输入您的手机号，方便老师联系你">
+            <x-input v-model="phoneLine" type="tel" novalidate :icon-type="iconType" :show-clear="false" :max="11" placeholder="请输入您的手机号，方便老师联系你">
               <img slot="label" class="input-icon" src="../assets/images/baiduImg/mobilephone.png" onclick="return false"/>
             </x-input>
           </group>
@@ -165,13 +145,7 @@
       </div>
       <div class="foot-bar">
         <div class="left">
-          <div class="l" v-if="$route.query.channel === 'weibo'">
-            <a href="http://p.qiao.baidu.com/im/index?siteid=10535005&ucid=8185192&cp=&cr=&cw=" style="color: #222;display: block;height: 45px">
-              <img src="../assets/images/baiduImg/wechat.png" width="22" height="17" onclick="return false"/>
-              <p>在线咨询</p>
-            </a>
-          </div>
-          <div class="l" @click="isShowDialog=true" v-else>
+          <div class="l" @click="isShowDialog=true">
             <img src="../assets/images/baiduImg/wechat.png" width="22" height="17" onclick="return false"/>
             <p>微信咨询</p>
           </div>
@@ -372,7 +346,7 @@
       }
     },
     mounted () {
-      console.log(this.$route.query.channel)
+      // console.log(this.$route)
     },
     watch: {
       isTopTips (val) {
