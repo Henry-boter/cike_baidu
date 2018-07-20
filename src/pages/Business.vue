@@ -232,7 +232,7 @@
                    ref="video"
                    controls
                    style="width: 90%;margin-left: 5%;margin-bottom: 15px"
-                   src="http://video.cike.hk/f083bc8f7c8f4d948e421a0d195d9983/462d934370e24896a9ea1066fcdd2a47-a5b7d8911cc7d347a9c9dd7e9b1d521b.mp4"
+                   poster="http://cikeenglish.oss-cn-shenzhen.aliyuncs.com/activity/201807134114"
             ></video>
             <div class="class-item" v-for="(item, index) in videoSrc" @click="playVideo(item.src)">
               <img :src="item.pic" width="100%" onclick="return false"/>
