@@ -1,0 +1,24 @@
+html, body {
+	margin: 0;
+	padding: 0;background-color: #fff;border: 0;font-size: 10px; font-family: "Microsoft YaHei";
+}
+p,h1,h2,h3{margin: 0;padding: 0;border: 0;}
+img{display: block; width: 100%;}
+.time{display: block; font-size: 1.6rem;opacity: 0.8; margin:1rem auto; color:#0A1342;}
+.time span{ color: #999; margin-left: 3rem}
+.content{ width: 92%; margin: 0 auto; overflow: hidden;}
+.box{ width: 100%; margin: 10px 0;}
+.b-title{font-size: 2.4rem;color: #354168; font-weight: bold; letter-spacing:2px;}
+h1{ font-size:1.4rem; color:#354168; opacity: 0.8; margin:0.6rem 0 1.4rem 0;}
+h2{ font-size:1.8rem; color: #354157; font-weight: bold; margin-bottom: 1rem;}
+
+.video-box{width: 92%; position: relative; margin: 0 4%;overflow: hidden;}
+#poster_img{
+	width: 100%;
+	position: absolute;
+	z-index: 100;overflow: hidden;}
+#poster_img img {display: block; width: 100%;}
+
+.addres-box{width: 100%; overflow: hidden;}
+.address{ width: 20%; float: left; margin-left: 2%;}
+h4{ display: block; width: 72%; float: left; margin-left: 4%; color: #666; font-size: 1.4rem;}
