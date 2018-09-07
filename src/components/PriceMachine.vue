@@ -259,16 +259,16 @@
       getUserSave (phone, name) {
         console.log(phone)
         console.log(`${name}。info:${JSON.stringify(this.$route.query)}`)
-        // this.$http.get('http://www.cike.hk/sale/userSave', {
-        //   params: {
-        //     phone: phone,
-        //     name: `${name}。info:${JSON.stringify(this.$route.query)}`
-        //   }
-        // }).then((data) => {
-        //   console.log(data)
-        // }, (err) => {
-        //   console.log(err)
-        // })
+        this.$http.get('http://www.cike.hk/sale/userSave', {
+          params: {
+            phone: phone,
+            name: `${name}。info:${JSON.stringify(this.$route.query)}`
+          }
+        }).then((data) => {
+          console.log(data)
+        }, (err) => {
+          console.log(err)
+        })
       },
       onShow () {
         this.isShowYuyue = false
