@@ -3,66 +3,65 @@
   <div class="content">
     <div class="box">
       <p class="b-title">定义成人英语新玩法，磁课英语第四家分校高颜值来袭！</p>
-      <a class="time" style="font-size: 16px" @click="showQR=true">磁课英语<span>9.10</span></a>
-      <img src="../assets/images/wechat/top.png">
-      <h1 >继桐梓林，鹭岛，软件园校区之后，磁课第四家校区诞生啦！<br>话不多说，先上图：</h1>
-      <h2>【她的样子】</h2>
-      <img src="../assets/images/wechat/1.jpg">
-      <h1 >全幅落地玻璃门，白框金属框包裹的是一个极具科技感的教室，简单的线条勾勒，明晃晃反射出的都是课堂的“磁力”。</h1>
-    </div>
-    <div class="box">
-      <img src="../assets/images/wechat/counter-b.jpg">
-      <h1 >教室背后，一排落地窗前的吧台，坐在这里望出去，视野宽阔到让你想重新定义你所居住的城市。这里有的是开阔的景，放飞的心，和无拘无束，畅所欲言的课堂。</h1>
-    </div>
-    <div class="box">
-      <img src="../assets/images/wechat/lounge-f.jpg">
-      <h1 >往里穿过走道，沿着落地玻璃窗延伸的，又是一处开放舒适的教室，鲜亮的色彩，活泼的搭配，无遮挡的透镜，让你一天的学习也变得轻松生动起来。</h1>
-    </div>
-    <div class="box">
-      <img src="../assets/images/wechat/4.jpg">
-      <h1 >选好课堂，挑好教室，想想，开始学习的你，是什么样子？</h1>
-    </div>
-
-    <div class="box">
-      <h2>【你在这的样子】</h2>
-      <h1 >9月1日，东门校区迎来了盛大的开业典礼。</h1>
-      <img src="../assets/images/wechat/15.jpg">
-    </div>
-
-    <div class="box">
-      <h1 >当天，有老师和你们一起看过的风景，一起品尝过的食物</h1>
-      <img src="../assets/images/wechat/13.jpg">
-    </div>
-
-    <div class="box">
-      <h1 >一起玩的游戏，一起聊的天<br>
-        从Icebreaker相互认识，到Movie ID妙语连珠，争相竟演融洽的气氛，生出冷气也压制不住的热络
+      <a class="time" style="font-size: 16px;text-align: left" @click="showQR=true">磁课英语<span>9月2日</span></a>
+      <h1 style="margin: 3rem 0;">说到<span class="bold">「颜值」</span>这个严肃的话题<br>
+        我们先来说说这些年的<span class="bold">磁课课堂</span>
       </h1>
-      <img src="../assets/images/wechat/11.jpg">
-    </div>
-
-    <div class="box">
-      <h1 >少不了的名师分享，磁课的老师们为你解锁什么才是“高效”的学习<br>
-        掌声不断，欢呼不绝，他们带给你的不只是知识，更是“如何学习”本身<br>
-        在磁课的课堂，你总能找到属于你的收获
+      <img src="../assets/images/wechat/cike-bottom2.gif">
+      <h1 style="margin: 2rem auto;">从桐梓林的名媛绅士<br>
+        到鹭岛国际的淑女型男<br>
+        再到软件园的白领精英们<br>
+        14年到17年，我们一起走过<br>
+        遇见更大的世界，遇见更好的自己<br>
       </h1>
-      <img src="../assets/images/wechat/16.jpg">
-    </div>
-
-    <div class="box">
-      <h1 >当然，这样的场合，少不了的是对你们的感谢<br>
-        带走一份小小的礼物<br>
-        带不走的是你们留下的欢笑
-      </h1>
-      <img src="../assets/images/wechat/14.jpg">
-    </div>
-
-    <div class="box">
-      <h1 >在这样的环境里学习英语练习口语，有你期待的干货，有趣，惊喜<br>
-        一群和你志同道合的小伙伴，助力你前进<br>
-        现在，是不是已经可以想象你在这里学习的样子？
+      <a class="toptime">2018年9月1日</a>
+      <h3>磁课英语第四家分校落地东大街</h3>
+      <img src="../assets/images/wechat/open.gif">
+      <img src="../assets/images/wechat/hello.gif">
+      <h1 style=" margin-bottom: 1.6rem;">从此，太古里的时尚达人们<br>
+        又多了一个修炼提升的好去处<br>▼
       </h1>
       <img src="../assets/images/wechat/1.jpg">
+      <div class="box">
+        <img src="../assets/images/wechat/classroom-s.jpg">
+      </div>
+      <div class="box">
+        <img src="../assets/images/wechat/6846.jpg">
+      </div>
+      <div class="box">
+        <img src="../assets/images/wechat/lounge-f.jpg">
+        <img src="../assets/images/wechat/hey.gif">
+      </div>
+      <div class="box">
+        <h1>俗话说<span class="bold">「始于颜值 陷于才华」</span><br>
+          2018，磁课重装升级<br>
+          同样，始于校区颜值<br>
+          用工匠精神打造精品课堂<br>
+          <span class="bold">用科技，定义成人英语新玩法</span><br>▼
+        </h1>
+        <img src="../assets/images/wechat/54.jpg">
+      </div>
+      <div class="box">
+        <h1 style="margin: 1.6rem 0 0.6rem;">“O2O浸入式学习”<br>
+          “线上翻转式课堂”<br>
+          “闭环学习解决方案”<br>
+          <span class="bold">磁课英语</span>，绝对让你<span class="bold">“陷于才华”</span><br>▼
+        </h1>
+        <img src="../assets/images/wechat/35453.jpg">
+      </div>
+      <div class="box">
+        <h1 style="margin: 1.6rem 0 0.6rem;">在东大街校区的开业庆祝会上<br>
+          迎来了久违的老学员，老朋友们<br>
+          感谢大家，一路见证磁课英语成长<br>▼
+        </h1>
+        <img src="../assets/images/wechat/455.jpg">
+      </div>
+      <div class="box" style="margin-bottom: 5rem;">
+        <h1 style="font-weight: bolder">磁力全开，干货满满<br>
+          活力不减，热情更多<br>
+          我们，等你来，一起开启学习之旅
+        </h1>
+      </div>
     </div>
 
     <div class="box">
@@ -84,16 +83,27 @@
     <div class="box">
       <h2>【东门校区位置】</h2>
       <div class="addres-box">
-        <img class="address" src="../assets/images/wechat/loader_1.gif">
-        <h4 >地铁2号线东门大桥站站口，明宇金融广场29楼1号(近太古里)<br>电话：133 0820 2931</h4>
-        <img src="../assets/images/wechat/map9.4.jpg">
+        <img class="address" src="../assets/images/wechat/my.jpg">
+        <h4>地铁2号线东门大桥站站口，明宇金融广场29楼1号(近太古里)<br>电话：133 0820 2931</h4>
       </div>
     </div>
+    <div class="box">
+      <a class="address1">磁课英语各校区详细地址</a>
+      <img src="../assets/images/wechat/map9.4.jpg">
+      <img src="../assets/images/wechat/bottom.jpg">
+    </div>
+    <!--<div class="box">-->
+      <!--<h2>【东门校区位置】</h2>-->
+      <!--<div class="addres-box">-->
+        <!--<img class="address" src="../assets/images/wechat/loader_1.gif">-->
+        <!--<h4 >地铁2号线东门大桥站站口，明宇金融广场29楼1号(近太古里)<br>电话：133 0820 2931</h4>-->
+        <!--<img src="../assets/images/wechat/map9.4.jpg">-->
+      <!--</div>-->
+    <!--</div>-->
 
     <div class="box">
-      <img src="../assets/images/wechat/bottom.jpg" style="pointer-events: auto">
       <div class="pl-box" style="display: flex;align-items: center;justify-content: space-between;color: #999;background-color: #fff">
-        <div>阅读 3986</div>
+        <div>阅读 6972</div>
         <div style="display: flex;align-items: center;" @click="goodClick">
           <img style="display: inline-block;width: 26px" v-if="isgood" src="../assets/images/wechat/iconfont/praise_fill.png"/>
           <img style="display: inline-block;width: 26px" v-else src="../assets/images/wechat/iconfont/praise.png"/>
@@ -244,15 +254,42 @@
   .time{display: block; font-size: 1.6rem;opacity: 0.8; margin:1rem auto; color:#0A1342;}
   .time span{ color: #999; margin-left: 3rem}
   .content{ width: 92%; margin: 0 auto; overflow: hidden;}
-  .box{ width: 100%; margin: 10px 0;}
-  .b-title{font-size: 24px;color: #111111; font-weight: bold;}
-  h1{ font-size:14px; color:#111; opacity: 0.8; margin:0.6rem 0 1.4rem 0;}
+  .box{ width: 100%; margin: 10px 0;text-align: center}
+  .b-title{font-size: 24px;color: #111111; font-weight: bold;line-height: 1.3;letter-spacing: 2px;text-align: left}
+  h1{ display: block;
+    font-size: 14px;
+    color: #111;
+    opacity: 0.8;
+    line-height: 20px;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 0.2rem;
+    font-weight: normal;}
   h2{ font-size:18px; color: #111; font-weight: bold; margin-bottom: 1rem;}
+  h3 {
+    display: block;
+    font-size: 14px;
+    color: #111;
+    opacity: 0.8;
+    margin: 3px 0 6px 0;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: bolder;
+  }
   h5{ display: block; font-size:15px; color: #999; float: left; font-weight: normal;}
   .addres-box{width: 100%; overflow: hidden;}
-  .address{ width: 20%; float: left; margin-left: 2%;}
+  .address{ width: 50%;float: left;}
   h4{ display: block; width: 72%; float: left; margin-left: 4%; color: #666; font-size: 14px;}
-
+  h4{    display: block;
+    width: 45%;
+    float: left;
+    margin-left: 5%;
+    margin-top: 40px;
+    color: #333;
+    line-height: 1.8;
+    font-size: 14px;
+    opacity: 0.8;}
   pre {
     white-space: pre;
     white-space: pre-wrap;
@@ -276,5 +313,40 @@
   }
   .dialog-demo .img-box {
     overflow: hidden;
+  }
+  .bold{
+    font-weight: bolder;
+  }
+  .toptime {
+    display: block;
+    margin: 50px auto 0;
+    width: 120px;
+    height: 22px;
+    background-color: #725B47;
+    color: #fff;
+    padding: 3px 5px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  .address1 {
+    display: block;
+    margin: 1rem auto;
+    width: 160px;
+    height: 22px;
+    background-color: #725B47;
+    color: #fff;
+    padding: 3px 5px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
   }
 </style>
