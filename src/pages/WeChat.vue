@@ -90,7 +90,7 @@
     <div class="box">
       <a class="address1">磁课英语各校区详细地址</a>
       <img src="../assets/images/wechat/map9.4.jpg">
-      <img src="../assets/images/wechat/bottom.jpg">
+      <img src="../assets/images/wechat/bottom.jpg" style="pointer-events: auto">
     </div>
     <!--<div class="box">-->
       <!--<h2>【东门校区位置】</h2>-->
