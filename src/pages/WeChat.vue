@@ -127,7 +127,7 @@
       <!--<a href="javascript:;" class="plBtn">留言</a>-->
     <!--</div>-->
     <comment-textarea></comment-textarea>
-    <div ref="msg_end" style="height: 0px;overflow: hidden"></div>
+    <div ref="msg_end" style="height: 1px;overflow: hidden"></div>
   </div>
     <!--弹窗二维码-->
     <div v-transfer-dom>
@@ -232,7 +232,7 @@
         // ele.scrollTop = ele.scrollHeight
         // console.log(ele)
         const end = this.$refs.msg_end
-        end.scrollIntoView()
+        end.scrollIntoView({block: 'end', behavior: 'smooth'})
       },
       goodClick () {
         if (this.isgood) {
