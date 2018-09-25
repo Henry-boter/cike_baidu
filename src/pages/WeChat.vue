@@ -17,7 +17,6 @@
       <a class="toptime">2018年9月1日</a>
       <h3>磁课英语第四家分校落地东大街</h3>
       <img src="../assets/images/wechat/open.gif">
-      <img src="../assets/images/wechat/hello.gif">
       <h1 style=" margin-bottom: 1.6rem;">从此，太古里的时尚达人们<br>
         又多了一个修炼提升的好去处<br>▼
       </h1>
@@ -65,7 +64,6 @@
     </div>
 
     <div class="box">
-      <!--<img src="../assets/images/wechat/price.jpg">-->
       <price-mashine></price-mashine>
     </div>
     <div class="box">
@@ -92,14 +90,6 @@
       <img src="../assets/images/wechat/map9.4.jpg">
       <img src="../assets/images/wechat/bottom.jpg" style="pointer-events: auto">
     </div>
-    <!--<div class="box">-->
-      <!--<h2>【东门校区位置】</h2>-->
-      <!--<div class="addres-box">-->
-        <!--<img class="address" src="../assets/images/wechat/loader_1.gif">-->
-        <!--<h4 >地铁2号线东门大桥站站口，明宇金融广场29楼1号(近太古里)<br>电话：133 0820 2931</h4>-->
-        <!--<img src="../assets/images/wechat/map9.4.jpg">-->
-      <!--</div>-->
-    <!--</div>-->
 
     <div class="box">
       <div class="pl-box" style="display: flex;align-items: center;justify-content: space-between;color: #999;background-color: #fff">
@@ -121,11 +111,6 @@
       <a class="ly" @click="toBottom">写留言</a>
     </div>
     <comment v-for="(item, index) in commentList" :data="item" :key="index"></comment>
-    <!--评论区域 begin-->
-    <!--<div class="reviewArea clearfix" id="pl">-->
-      <!--<textarea class="ly-box comment-input" placeholder="发表您的留言。。。" onkeyup="keyUP(this)"></textarea>-->
-      <!--<a href="javascript:;" class="plBtn">留言</a>-->
-    <!--</div>-->
     <comment-textarea></comment-textarea>
     <div ref="msg_end" style="height: 1px;overflow: hidden"></div>
   </div>
@@ -168,6 +153,7 @@
       }
     },
     mounted () {
+      /*eslint-disable*/
       const url = document.location.href
       const _this = this
       this.$http.get('http://www.cike.hk/app/weixin/jsTicket', {
@@ -175,7 +161,6 @@
           url: url
         }
       }).then(function (response) {
-        console.log(response)
         wx.config({
           debug: false,
           appId: response.data.appId,
@@ -222,6 +207,7 @@
           console.log('wx err', res)
         })
       })
+      /*eslint-enable*/
     },
     methods: {
       // 微信认证
