@@ -3,7 +3,7 @@
   <div class="content">
     <div class="box">
       <p class="b-title">定义成人英语新玩法，磁课英语第四家分校高颜值来袭！</p>
-      <a class="time" style="font-size: 16px;text-align: left" @click="showQR=true">磁课英语<span>9月2日</span></a>
+      <a class="time" style="font-size: 16px;text-align: left" @click="showQR=true">磁课英语<span>9月24日</span></a>
       <h1 style="margin: 3rem 0;">说到<span class="bold">「颜值」</span>这个严肃的话题<br>
         我们先来说说这些年的<span class="bold">磁课课堂</span>
       </h1>
@@ -14,7 +14,7 @@
         14年到17年，我们一起走过<br>
         遇见更大的世界，遇见更好的自己<br>
       </h1>
-      <a class="toptime">2018年9月1日</a>
+      <a class="toptime">2018年9月</a>
       <h3>磁课英语第四家分校落地东大街</h3>
       <img src="../assets/images/wechat/open.gif">
       <h1 style=" margin-bottom: 1.6rem;">从此，太古里的时尚达人们<br>
@@ -153,6 +153,7 @@
       }
     },
     mounted () {
+      this.FilterMsgNum()
       /*eslint-disable*/
       const url = document.location.href
       const _this = this
@@ -228,6 +229,10 @@
           this.isgood = true
           this.good_num++
         }
+      },
+      FilterMsgNum () {
+        let d = new Date()
+        console.log(d)
       }
     }
   }

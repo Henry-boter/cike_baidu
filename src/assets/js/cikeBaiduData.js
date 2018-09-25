@@ -75,7 +75,7 @@ export const commentList = [
     'content': '上班在太古里，终于等到了东门校区开业！哈哈哈以后上课太方便了',
     'zan': false,
     'zan_num': 10,
-    'post_time': '2018-09-04 17:32:52',
+    'post_time': '2018-09-24 17:32:52',
     'author_msg': 'See you there~'
   },
   {
@@ -85,7 +85,7 @@ export const commentList = [
     'content': '想了解课程，住水碾河附近',
     'zan': false,
     'zan_num': 6,
-    'post_time': '2018-09-05 17:20:22',
+    'post_time': '2018-09-24 17:20:22',
     'author_msg': 'Hey，这边已经收到您登记的联系方式，课程老师会直接跟您联系哟~'
   },
   {
@@ -95,7 +95,7 @@ export const commentList = [
     'content': '新校区也太美了吧，迫不及待',
     'zan': false,
     'zan_num': 4,
-    'post_time': '2018-09-05 17:19:28',
+    'post_time': '2018-09-24 17:19:28',
     'author_msg': '有没有被“磁”到！'
   },
   {
@@ -105,7 +105,7 @@ export const commentList = [
     'content': '打算和朋友组团来上课了哈哈！',
     'zan': false,
     'zan_num': 2,
-    'post_time': '2018-09-05 18:45:26',
+    'post_time': '2018-09-24 18:45:26',
     'author_msg': '跟小伙伴一起学习更有动力吧~'
   },
   {
@@ -115,7 +115,7 @@ export const commentList = [
     'content': '离我家好近哦',
     'zan': false,
     'zan_num': 1,
-    'post_time': '2018-09-05 19:42:12',
+    'post_time': '2018-09-24 19:42:12',
     'author_msg': '那上课频率就可以保证啦~'
   },
   {
@@ -125,7 +125,7 @@ export const commentList = [
     'content': '厉害了厉害了',
     'zan': false,
     'zan_num': 1,
-    'post_time': '2018-09-06 09:49:22',
+    'post_time': '2018-09-24 09:49:22',
     'author_msg': ''
   },
   {
@@ -135,7 +135,7 @@ export const commentList = [
     'content': '零基础，想了解课程安排',
     'zan': false,
     'zan_num': 0,
-    'post_time': '2018-09-06 10:01:03',
+    'post_time': '2018-09-25 10:01:03',
     'author_msg': '我们的课程都是分不同级别的并且针对零基础学员有一套非常高效的方法哦~您可以在系统内留下联系方式哦，课程老师会联系您并会详细给您介绍'
   },
   {
@@ -145,7 +145,7 @@ export const commentList = [
     'content': '我已经在东门校区上课了，哈哈哈哈喜欢喜欢',
     'zan': false,
     'zan_num': 0,
-    'post_time': '2018-09-06 12:40:22',
+    'post_time': '2018-09-25 12:40:22',
     'author_msg': ''
   },
   {
@@ -155,7 +155,7 @@ export const commentList = [
     'content': '课程表可以发一个吗，想了解一下',
     'zan': false,
     'zan_num': 0,
-    'post_time': '2018-09-06 14:45:15',
+    'post_time': '2018-09-25 14:45:15',
     'author_msg': 'Sure~这边已经收到您登记的联系方式，课程老师会跟您详细的介绍课程信息哦~'
   },
   {
@@ -165,7 +165,7 @@ export const commentList = [
     'content': '下了课在吧台背了会儿单词，感觉很舒服',
     'zan': false,
     'zan_num': 0,
-    'post_time': '2018-09-06 18:35:25',
+    'post_time': '2018-09-25 18:35:25',
     'author_msg': '是在新校区上的课吗~感觉是不是棒棒的~'
   },
   {
@@ -175,7 +175,7 @@ export const commentList = [
     'content': '离地铁站近不近哦',
     'zan': false,
     'zan_num': 0,
-    'post_time': '2018-09-06 20:52:42',
+    'post_time': '2018-09-25 20:52:42',
     'author_msg': '很近哦~据地铁2号线东门大桥站C口步行290m'
   },
   {
@@ -185,7 +185,7 @@ export const commentList = [
     'content': '居然跟我们公司在同一栋楼里',
     'zan': false,
     'zan_num': 0,
-    'post_time': '2018-09-07 08:45:22',
+    'post_time': '2018-09-25 08:45:22',
     'author_msg': '同学要不要到楼上来学学英语呀~'
   },
   {
@@ -195,7 +195,7 @@ export const commentList = [
     'content': '已经在新校区上过几次课了，我不会告诉你们有多爽',
     'zan': false,
     'zan_num': 0,
-    'post_time': '2018-09-07 10:15:29',
+    'post_time': '2018-09-25 10:15:29',
     'author_msg': 'The more we share, the more we have!'
   },
   {
@@ -205,7 +205,7 @@ export const commentList = [
     'content': '每次上课，1个半小时过得太快了哈哈',
     'zan': false,
     'zan_num': 0,
-    'post_time': '2018-09-07 14:49:12',
+    'post_time': '2018-09-25 14:49:12',
     'author_msg': '学习的过程总是那么愉悦'
   },
   {
@@ -215,7 +215,7 @@ export const commentList = [
     'content': '想了解新校区课程安排',
     'zan': false,
     'zan_num': 0,
-    'post_time': '2018-09-07 16:55:39',
+    'post_time': '2018-09-25 16:55:39',
     'author_msg': '您可以在系统内留下联系方式哦，这边课程老师会跟您联系详细介绍课程安排哦~'
   }
 ]
