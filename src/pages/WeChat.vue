@@ -127,7 +127,7 @@
 </template>
 
 <script>
-  import {XDialog, TransferDomDirective as TransferDom, dateFormat} from 'vux'
+  import {XDialog, TransferDomDirective as TransferDom} from 'vux'
   import PriceMashine from '../components/PriceMachine'
   import Comment from '../components/Comment'
   import CommentTextarea from '../components/CommentTextarea'
