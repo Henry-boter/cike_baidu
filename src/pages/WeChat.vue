@@ -93,7 +93,7 @@
 
     <div class="box">
       <div class="pl-box" style="display: flex;align-items: center;justify-content: space-between;color: #999;background-color: #fff">
-        <div>阅读 6972</div>
+        <div>阅读 {{FilterMsgNum}}</div>
         <div style="display: flex;align-items: center;" @click="goodClick">
           <img style="display: inline-block;width: 26px" v-if="isgood" src="../assets/images/wechat/iconfont/praise_fill.png"/>
           <img style="display: inline-block;width: 26px" v-else src="../assets/images/wechat/iconfont/praise.png"/>
@@ -127,7 +127,7 @@
 </template>
 
 <script>
-  import {XDialog, TransferDomDirective as TransferDom} from 'vux'
+  import {XDialog, TransferDomDirective as TransferDom, dateFormat} from 'vux'
   import PriceMashine from '../components/PriceMachine'
   import Comment from '../components/Comment'
   import CommentTextarea from '../components/CommentTextarea'
@@ -210,14 +210,22 @@
       })
       /*eslint-enable*/
     },
+    computed: {
+      FilterMsgNum () {
+        let initValue = 6800
+        let s1 = '2018-09-24'
+        s1 = new Date(s1.replace(/-/g, '/'))
+        let s2 = new Date()
+        var days = s2.getTime() - s1.getTime()
+        var time = parseInt(days / (1000 * 60 * 60 * 24))
+        console.log(time)
+        let num = initValue + time * 98
+        return num
+      }
+    },
     methods: {
-      // 微信认证
-
       // 滚动到最底部
       toBottom () {
-        // var ele = document.getElementById('#wrap')
-        // ele.scrollTop = ele.scrollHeight
-        // console.log(ele)
         const end = this.$refs.msg_end
         end.scrollIntoView({block: 'end', behavior: 'smooth'})
       },
@@ -229,10 +237,6 @@
           this.isgood = true
           this.good_num++
         }
-      },
-      FilterMsgNum () {
-        let d = new Date()
-        console.log(d)
       }
     }
   }
