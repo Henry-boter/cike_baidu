@@ -153,7 +153,6 @@
       }
     },
     mounted () {
-      this.FilterMsgNum()
       /*eslint-disable*/
       const url = document.location.href
       const _this = this
