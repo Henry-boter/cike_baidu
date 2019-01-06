@@ -21,7 +21,8 @@
     "vue-router": "^3.0.1",
     "vue": "^2.5.16",
     "good-storage": "^1.0.1",
-    "weixin-js-sdk": "^1.2.0"
+    "weixin-js-sdk": "^1.2.0",
+    "swiper": "^4.4.6"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
