@@ -17,8 +17,7 @@ export const targetList = [
   {id: '4', willItem: '移民'},
   {id: '5', willItem: '教育子女'},
   {id: '6', willItem: '自我提升'},
-  {id: '7', willItem: '兴趣爱好'},
-  {id: '8', willItem: '其他'}
+  {id: '7', willItem: '兴趣爱好'}
 ]
 export const levelList = [
   {id: '1', willItem: '零基础'},
@@ -45,7 +44,8 @@ export const hoursList = [
   {id: '5', willItem: '5小时'},
   {id: '6', willItem: '6小时'},
   {id: '7', willItem: '7小时'},
-  {id: '8', willItem: '8小时'}
+  {id: '8', willItem: '8小时'},
+  {id: '9', willItem: '9小时'}
 ]
 
 // 试听课程
