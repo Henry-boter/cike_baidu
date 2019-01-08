@@ -368,4 +368,52 @@
   text-align: center;
   padding: 15px;
 }
+.popup-logo{
+  width: 76%;
+  margin: 20px 0 0 20px;
+  display: block
+}
+.popup-content{
+  padding: 20px;
+  background-color: #fff;
+  text-align: center;
+  .popup-content-title {
+    font-size: 22px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px
+  }
+  .come-school-tips{
+    text-align: center;
+    color: #444;
+    font-size: 14px;
+    line-height: 2
+  }
+  .price-confirm{
+    background-color: #fb5858;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 18px;
+    color: #fff;
+    font-weight: bold;
+    line-height: 40px;
+    border-radius: 5px
+  }
+  .price-cancel{
+    border: 1px solid #ccc;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 18px;
+    color: #333;
+    line-height: 38px;
+    border-radius: 5px
+  }
+}
+.weui-cell {
+  background-color: #eee;
+}
+.yuyue-box .yuyue-input .weui-cell {
+  background-color: #fff;
+  border-radius: 5px;
+}
 </style>
