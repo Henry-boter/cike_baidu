@@ -67,28 +67,25 @@
         <swiper-item>
           <div style="text-align: center">
             <h1 class="swiper-item-title">每周可以花在英语学习上的时间</h1>
-            <div style="display: flex">
-              <div style="flex: 1;padding: 0 10px; background-color: crimson">
-                <p>选天数</p>
-                <checker
-                  v-model="dayItem"
-                  default-item-class="swiper-item-day-radio"
-                  selected-item-class="swiper-item-day-radio-selected"
-                >
-                  <checker-item v-for="item in dayList" :key="item.id" :value="item.willItem">{{item.willItem}}</checker-item>
-                </checker>
-              </div>
-              <div style="flex: 2;background-color: floralwhite">
-                <p>选每天学习几小时</p>
-                <checker
-                  v-model="hoursItem"
-                  default-item-class="swiper-item-hours-radio"
-                  selected-item-class="swiper-item-hours-radio-selected"
-                >
-                  <checker-item v-for="item in hoursList" :key="item.id" :value="item.willItem">{{item.willItem}}</checker-item>
-                </checker>
-              </div>
-            </div>
+            <checker
+              v-model="dayItem"
+              default-item-class="swiper-item-radio"
+              selected-item-class="swiper-item-radio-selected"
+            >
+              <checker-item v-for="item in dayList" :key="item.id" :value="item.willItem">{{item.willItem}}</checker-item>
+            </checker>
+            <!--<div style="display: flex">-->
+              <!--<div style="flex: 1;padding: 0 10px; background-color: crimson">-->
+                <!--<p>选天数</p>-->
+                <!--<checker-->
+                  <!--v-model="dayItem"-->
+                  <!--default-item-class="swiper-item-day-radio"-->
+                  <!--selected-item-class="swiper-item-day-radio-selected"-->
+                <!--&gt;-->
+                  <!--<checker-item v-for="item in dayList" :key="item.id" :value="item.willItem">{{item.willItem}}</checker-item>-->
+                <!--</checker>-->
+              <!--</div>-->
+            <!--</div>-->
           </div>
         </swiper-item>
       </swiper>
@@ -234,8 +231,8 @@
             <img src="../assets/images/baiduImg/65465.gif" height="40px" width="40px"/></span></p>
           <img src="../assets/images/baiduImg/st-banner.png" width="100%"/>
           <div class="audition-wrap">
-            <video width="100%"
-                   ref="video"
+            <img v-if="coverImg" src="http://cikeenglish.oss-cn-shenzhen.aliyuncs.com/activity/201807134114" class="videoPoster" @click="playVideo(videoSrc[0].src)" alt="">
+            <video ref="video"
                    controls
                    poster="http://cikeenglish.oss-cn-shenzhen.aliyuncs.com/activity/201807134114"
                    style="width: 90%;margin-left: 5%;margin-bottom: 15px"
@@ -326,7 +323,6 @@
         hoursList: hoursList,
         activityVideoSrc: activityVideoSrc,
         avtivityVideoPaused: true,
-        hoursItem: null,
         isShowYuyue: false,
         isShowOffer: false,
         isShowOfferTwo: false,
@@ -354,7 +350,8 @@
         },
         phoneCode: null,
         phoneReg: '',
-        isShowRegBox: false
+        isShowRegBox: false,
+        coverImg: true
       }
     },
     mounted () {
@@ -437,7 +434,7 @@
             } else { this.swiperItemIndex++ }
             break
           case 3:
-            if (this.dayItem === null || this.hoursItem === null) {
+            if (this.dayItem === null) {
               this.topTipsText = '您还没有选择每天学习时间'
               this.isTopTips = true
             } else { this.isShowOffer = true }
@@ -453,7 +450,7 @@
           this.isTopTips = true
         } else {
           let type = '寻求报价'
-          let name = type + '，学习意向：' + this.willClassItem + '，学习目的：' + this.targetItem + '，目前英语水平：' + this.levelItem + '，每周学习时长：' + this.dayItem + this.hoursItem
+          let name = type + '，学习意向：' + this.willClassItem + '，学习目的：' + this.targetItem + '，目前英语水平：' + this.levelItem + '，每周学习时长：' + this.dayItem
           this.getUserSave(phone, name)
           this.isShowOffer = false
           this.isShowOfferTwo = true
@@ -466,7 +463,7 @@
           this.isTopTips = true
         } else {
           let type = '寻求报价'
-          let name = type + '，学习意向：' + this.willClassItem + '，学习目的：' + this.targetItem + '，目前英语水平：' + this.levelItem + '，每周学习时长：' + this.dayItem + this.hoursItem
+          let name = type + '，学习意向：' + this.willClassItem + '，学习目的：' + this.targetItem + '，目前英语水平：' + this.levelItem + '，每周学习时长：' + this.dayItem
           this.getUserSave(phone, name)
           this.isShowOffer = false
           this.isShowOfferTwo = true
@@ -482,7 +479,7 @@
 //      获取人工方案
       madePlan () {
         let type = '需要人工方案'
-        let name = type + '，学习意向：' + this.willClassItem + '，学习目的：' + this.targetItem + '，目前英语水平：' + this.levelItem + '，每周学习时长：' + this.dayItem + this.hoursItem
+        let name = type + '，学习意向：' + this.willClassItem + '，学习目的：' + this.targetItem + '，目前英语水平：' + this.levelItem + '，每周学习时长：' + this.dayItem
         this.getUserSave(this.phonePlan, name)
         this.alertTitle = '感谢关注磁课英语'
         this.alertText = '我们课程的顾问老师会在30分钟给你致电，请保持手机通畅'
@@ -543,6 +540,7 @@
             const video = this.$refs.video
             video.src = src
             video.play()
+            this.coverImg = false
           } else {
             this.isShowRegBox = true
           }
@@ -904,6 +902,14 @@
   }
   .audition-wrap{
     /*padding: 0px 30px 30px;*/
+    position: relative;
+  }
+  .videoPoster{
+    width: 90%;
+    position: absolute;
+    top: 0;
+    left: 5%;
+    z-index: 2;
   }
   .class-item{
     margin-bottom: -4px;
