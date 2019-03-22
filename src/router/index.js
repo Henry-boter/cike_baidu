@@ -9,6 +9,6 @@ export default new Router({
     {path: '/business', name: 'business', component: resolve => require(['../pages/Business'], resolve)},
     {path: '/travel', name: 'travel', component: resolve => require(['../pages/Travel'], resolve)},
     {path: '/WeChat', name: 'WeChat', component: resolve => require(['../pages/WeChat'], resolve)},
-    {path: '/ad', name: 'ad', component: resolve => require(['../pages/Advertising'], resolve)}
+    {path: '/news', name: 'news', component: resolve => require(['../pages/news'], resolve)}
   ]
 })

@@ -4,7 +4,7 @@ export const willClassList = [
   {id: '3', willItem: '旅游英语'},
   {id: '4', willItem: '职场英语'},
   {id: '5', willItem: '商务英语'},
-  {id: '6', willItem: '移民英语'},
+  {id: '6', willItem: '出国英语'},
   {id: '7', willItem: '自然拼读'},
   {id: '8', willItem: '音标纠音'},
   {id: '9', willItem: '英语语法'},
